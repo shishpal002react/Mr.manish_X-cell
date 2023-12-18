@@ -229,7 +229,8 @@ export const NotificationMainSection = () => {
           <tbody>
             {not?.map((i, index) => (
               <tr key={index}>
-                <td>{i._id}</td>
+                <td>{i?.recipient?.[0]?.userId?._id}</td>
+
                 <td> {i.title} </td>
                 <td> {i.message} </td>
                 <td>
