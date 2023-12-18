@@ -12,7 +12,7 @@ import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import "bootstrap/dist/css/bootstrap.min.css";
 import axios from "axios";
-import {useNavigate} from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export const TotalOrderMainSection = () => {
   const [tab, setTab] = useState("all");
@@ -51,8 +51,9 @@ export const TotalOrderMainSection = () => {
   const searchData = !query
     ? orders
     : orders?.filter((item) => {
-        return           item?.customerId?.includes(query) ||
-          item?.orderId?.includes(query);
+        return (
+          item?.customerId?.includes(query) || item?.orderId?.includes(query)
+        );
       });
 
   /*const HandleSearch = (e) => {
@@ -88,8 +89,7 @@ export const TotalOrderMainSection = () => {
     const [totalPackages, setTpack] = useState("");
 
     //const dispatch = useDispatch();
-    const urla =
-      "https://mr-manish-xcell-backend.vercel.app/api/v1/order-add";
+    const urla = "https://mr-manish-xcell-backend.vercel.app/api/v1/order-add";
     const handleClick = async (e) => {
       e.preventDefault();
       try {
@@ -217,7 +217,7 @@ export const TotalOrderMainSection = () => {
           <div
             onClick={() => setTab("all")}
             className={tab === "all" && styles.active}
-            style={{marginBottom:"3%",height:"40px"}}
+            style={{ marginBottom: "3%", height: "40px" }}
           >
             All Orders
           </div>
@@ -268,28 +268,31 @@ export const TotalOrderMainSection = () => {
         <div className={styles.MainTableDiv}>
           <table>
             <thead>
-            <tr>
-              <th>Patient Name</th>
-              <th>Order Id</th>
-              <th>Patient Id</th>
-              <th>Order Date</th>
-              <th>Total Amount</th>
-              <th>Total Packages</th>
-            </tr>
+              <tr>
+                <th>Patient Name</th>
+                <th>Order Id</th>
+                <th>Patient Id</th>
+                <th>Order Date</th>
+                <th>Total Amount</th>
+                <th>Total Packages</th>
+              </tr>
             </thead>
             <tbody>
               {tab === "all"
                 ? searchData?.map((ele) => (
                     <>
-              <tr>
-                <td>{ele?.name}</td>
-                <td>{ele?.catalogueId?.orderId? ele?.catalogueId?.orderId : ele?.orderId}</td>
-                <td>{ele?.customerId}</td>
-                <td>{ele?.createdAt}</td>
-                <td>{ele?.totalAmount}</td>
-                <td>{ele?.totalPackages}
-              </td>
-              </tr>
+                      <tr>
+                        <td>{ele?.name}</td>
+                        <td>
+                          {ele?.catalogueId?.orderId
+                            ? ele?.catalogueId?.orderId
+                            : ele?.orderId}
+                        </td>
+                        <td>{ele?.customerId}</td>
+                        <td>{ele?.createdAt}</td>
+                        <td>{ele?.totalAmount}</td>
+                        <td>{ele?.totalPackages}</td>
+                      </tr>
                     </>
                   ))
                 : tab === "new"

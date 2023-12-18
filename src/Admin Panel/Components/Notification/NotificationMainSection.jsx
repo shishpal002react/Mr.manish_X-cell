@@ -16,8 +16,7 @@ export const NotificationMainSection = () => {
   const [id, setId] = useState("");
   const [edit, setEdit] = useState(false);
 
-  const url =
-    "https://mr-manish-xcell-backend.vercel.app/api/v1/notifications/";
+  const url = "https://mr-manish-xcell-backend.vercel.app/api/v1/notifications";
 
   const getNotifications = async () => {
     const token = localStorage.getItem("token");
@@ -49,7 +48,7 @@ export const NotificationMainSection = () => {
     const [sendType, setSendType] = useState("");
 
     const urla =
-      "https://mr-manish-xcell-backend.vercel.app/api/v1/admin/notifications/";
+      "https://mr-manish-xcell-backend.vercel.app/api/v1/admin/notifications";
 
     const fetchHandler = async () => {
       try {
