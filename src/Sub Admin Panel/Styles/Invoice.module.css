@@ -1,0 +1,357 @@
+.main{
+    width: 90%;
+    margin: auto;
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.main>button{
+    width: 141px;
+height: 35px;
+background: #2A3A8F;
+color: white;
+border-radius: 4px;
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 24px;
+border: none;
+cursor: pointer;
+}
+.invoiceMainDiv{
+    margin: auto;
+    width: 90%;
+
+}
+.invoiceMainDiv>p{
+    font-family: 'Poppins';
+    margin-top: 0px;
+font-style: normal;
+font-weight: 500;
+font-size: 24px;
+line-height: 36px;
+text-decoration-line: underline;
+color: #2A3A8F;
+}
+.customerDetailDiv{
+    display: flex;
+width: 100%;
+gap: 50px;
+justify-content: space-between;
+}
+.customerDetailDiv>div{
+    width: 50%;
+}
+
+.customerDetailDiv>div>div>h2{
+    width: 30%;
+    font-weight: bold;
+    margin-top: 0px;
+font-family: 'Poppins';
+font-style: normal;
+/* border: 1px solid red; */
+font-weight: 500;
+font-size: 20px;
+line-height: 30px;
+text-align: left;
+}
+.customerDetailDiv>div>div{
+    display: flex;
+    /* align-items: center; */
+    /* justify-content: space-evenly; */
+}
+.customerDetailDiv>div>div>p{
+    font-family: 'Poppins';
+    font-style: normal;
+  /* width: 50%; */
+  margin-top: 0px;
+  text-align: left;  
+  /* font-weight: 400; */
+    font-size: 20px;
+    /* line-height: 30px;   */
+    color: rgb(70, 70, 70);
+}
+
+.TableDiv {
+    display: flex;
+    position: relative;
+}
+.TableDiv>table{
+    width: 90%;
+    
+}
+.TableDiv>button{
+    display: block;
+width: 51px;
+height: 35px;
+background: #2A3A8F;
+color: white;
+border-radius: 4px;
+font-size: 24px;
+border: none;
+cursor: pointer;
+position: absolute;
+bottom: 3%;
+right: 3%;
+
+}
+.TableDiv>table tr th{
+    text-align: center; 
+    height: 48px;
+    background: #2A3A8F;
+    /* border: none; */
+border: 1px solid #D9D9D9;
+color: white;
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 24px;
+}
+
+.TableDiv>table tr td{
+    /* width: 10%; */
+    height: 48px;
+    margin-top: 10px;
+    text-align: center;
+    background: #FFFFFF;
+border: 1px solid #D9D9D9;
+}
+.TotalAmountDiv{
+    width: 90%;
+    display: flex;
+   
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+.TotalAmountDiv>div{
+    width: 40%;
+    /* border: 1px solid red; */
+}
+.TotalAmountDiv>div>div{
+    display: flex;
+    align-items: center;
+justify-content: flex-end;
+}
+
+
+.TotalAmountDiv>div>div>h2{
+    width: 30%;
+    font-weight: bold;
+    margin-top: 0px;
+font-family: 'Poppins';
+font-style: normal;
+/* border: 1px solid red; */
+font-weight: 500;
+font-size: 16px;
+line-height: 30px;
+text-align: left;
+}
+
+.TotalAmountDiv>div>div>p{
+    font-family: 'Poppins';
+    font-style: normal;
+  width: 60%;
+  margin-top: 0px;
+  text-align: left;  
+  /* font-weight: 400; */
+    font-size: 16px;
+    /* line-height: 30px;   */
+    color: rgb(70, 70, 70);
+}
+.HelpText>p{
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 20px;
+line-height: 30px;
+}
+.invoiceMainDiv,.InvoiceDiv>button{
+    display: block;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 360px;
+    height: 64px;
+    background: #2A3A8F;
+    color: white;
+    border-radius: 16px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 30px;
+    border: none;
+    cursor: pointer;
+}
+.InvoiceDiv{
+    width: 90%;
+    margin: auto;
+
+}
+.HeaderSection{
+margin-top: -20px;
+width: 100%;
+/* height: 285px; */
+
+
+background: #2A3A8F;
+}
+.HeaderSection>h1{
+    padding-top: 10px;
+    text-align: center;
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 32px;
+line-height: 48px;
+
+color: #FFFFFF;
+}
+
+.HeadercustomerDetailDiv{
+    display: flex;
+width: 100%;
+/* gap: 50px; */
+justify-content: space-between;
+margin: 10px;
+}
+.HeadercustomerDetailDiv>div:first-child{
+    width: 50%;
+    margin-left: 10px;
+}
+.HeadercustomerDetailDiv>div:last-child{
+    width: 38%;
+margin-right: -50px;
+}
+
+
+.HeadercustomerDetailDiv>div>div>h2{
+    width: 30%;
+    font-weight: bold;
+    margin-top: 0px;
+font-family: 'Poppins';
+font-style: normal;
+/* border: 1px solid red; */
+font-weight: 500;
+font-size: 20px;
+line-height: 30px;
+text-align: left;
+color: white;
+}
+.HeadercustomerDetailDiv>div>div{
+    display: flex;
+    margin-top: -10px;
+    /* align-items: center; */
+    /* justify-content: space-evenly; */
+}
+.HeadercustomerDetailDiv>div>div>p{
+    font-family: 'Poppins';
+    margin-top: 0px;
+    font-style: normal;
+  /* width: 50%; */
+ 
+  text-align: left;  
+  /* font-weight: 400; */
+    font-size: 20px;
+    /* line-height: 30px;   */
+    color:white;
+}
+.TableMainDiv{
+    width: 100%;
+    margin-top: -10px;
+    border: 1px solid #D9D9D9;
+
+display: flex;
+justify-content: center;  
+}
+.TableMainDiv>div{
+    width: 100%;
+}
+
+
+.InvoiceTableDiv>table{
+    width: 90%;
+    margin: auto;
+    margin-top: 10px;
+    
+}
+
+.InvoiceTableDiv>table tr th{
+    text-align: center; 
+    height: 48px;
+    background: #2A3A8F;
+    /* border: none; */
+border: 1px solid #D9D9D9;
+color: white;
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 24px;
+}
+
+.InvoiceTableDiv>table tr td{
+    /* width: 10%; */
+    height: 48px;
+    margin-top: 10px;
+    text-align: center;
+    background: #FFFFFF;
+border: 1px solid #D9D9D9;
+}
+
+
+.InvoiceTotalAmountDiv{
+    width: 97%;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+.InvoiceTotalAmountDiv>div{
+    width: 40%;
+    /* border: 1px solid red; */
+}
+.InvoiceTotalAmountDiv>div>div{
+    display: flex;
+    align-items: center;
+justify-content: flex-end;
+}
+
+
+.InvoiceTotalAmountDiv>div>div>h2{
+    width: 30%;
+    font-weight: bold;
+    margin-top: 0px;
+font-family: 'Poppins';
+font-style: normal;
+/* border: 1px solid red; */
+font-weight: 500;
+font-size: 16px;
+line-height: 30px;
+text-align: left;
+}
+.InvoiceTotalAmountDiv>div>div>p{
+    font-family: 'Poppins';
+    font-style: normal;
+  width: 60%;
+  margin-top: 0px;
+  text-align: left;  
+  /* font-weight: 400; */
+    font-size: 16px;
+    /* line-height: 30px;   */
+    color: rgb(70, 70, 70);
+}
+.InvoiceHelpText{
+    width: 90%;
+    margin: auto;
+    margin-bottom: 50px;
+}
+.InvoiceHelpText>p{
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 20px;
+line-height: 30px;
+}

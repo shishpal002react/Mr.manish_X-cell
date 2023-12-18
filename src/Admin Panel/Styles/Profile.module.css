@@ -1,0 +1,97 @@
+.main{
+    width: 50%;
+    height: 500px;
+    margin: auto;
+    margin-top: 59px;
+}
+.profilePic{
+    width: 95%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.profilePic>div{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+.profilePic>div>div>h2{
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 600;
+font-size: 32px;
+line-height: 48px;
+}
+.profilePic>button{
+    width: 127px;
+    height: 40px;
+    border: none;
+    cursor: pointer;
+    background: #2A3A8F;
+    border-radius: 8px;
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 24px;
+color: #FFFFFF;
+
+}
+.role{
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 24px;
+line-height: 36px;
+margin-top: -25px;
+color: #2A3A8F;
+}
+
+.AdminId{
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 700;
+font-size: 24px;
+line-height: 36px;
+color: #2A3A8F;
+margin-left: 15px;
+margin-top: 5px;
+}
+
+.TabTitle{
+    display: flex;
+    /* width: 114px; */
+    gap: 40px;
+   
+  height: 36px;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 36px;
+  margin-bottom: -7px;
+  }
+  .TabTitle>div{
+    height: 100%;
+    cursor: pointer;
+  }
+  .active, .btn:hover {
+   color: #2A3A8F;
+   border-bottom: 3px solid #2A3A8F;
+    /* color: white; */
+  }
+  .profileDetail>h2{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-size: 16px;
+    line-height: 24px;
+  }
+.profileDetail>p{ 
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 167.5%;
+color:  #000000;
+  }

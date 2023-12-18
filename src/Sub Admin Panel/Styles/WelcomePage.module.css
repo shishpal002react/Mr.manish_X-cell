@@ -1,0 +1,34 @@
+.WelComeMainDiv{
+    width: 100%;
+    height: 752px;
+    background-image: url(../Assets/Welcom_bg1.png), url(../Assets//Welcom_bg2.png),url(../Assets/Welcome_bg3.png);
+  background-position: left, center,right;
+  background-repeat: no-repeat, no-repeat,no-repeat;
+ background-size: 34%,34%,34%;
+ position: relative; 
+ display: flex;
+ align-items: center;
+ justify-content: center;
+
+}
+.WelComeMainDivContent{
+    /* position: absolute; */
+    /* top: 25%; */
+    display: flex;
+ align-items: center;
+ justify-content: center;
+   background-color:rgba(112, 110, 110, 0.67); ;
+width: 100%;
+height: 100%;
+}
+.WelComeMainDivContent>div>h1{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    text-align: center;
+    line-height: 58px;   
+    color: #FFFFFF;
+    /* margin-bottom: 0; */
+}
+

@@ -1,0 +1,115 @@
+.HelpGridSection{
+    width: 90%;
+    margin: auto;
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+.HelpGridSection>div{
+    box-sizing: border-box;
+    width: 288px;
+    height: 243px;
+    padding-top:10px;
+    padding-left: 10px;
+    margin: auto;
+    background: #FFFFFF;
+    border: 1px solid #D9D9D9;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    position: relative;
+}
+.HelpGridSection>div>p{
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 24px;
+margin-top: 0px;
+line-height: 36px;
+}
+.HelpGridSection>div>ul{
+    margin-top: -5px;
+    margin-left: -10px;
+}
+.HelpGridSection>div>ul>li{
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 24px;
+}
+.HelpGridSection>div>a{
+  
+    text-decoration: none;
+    color: #2A3A8F;
+}
+.HelpGridSection>div>a>div{
+position:absolute;
+/* left: 365px; */
+/* top: 425px;   */
+bottom: 0;
+display: flex;
+align-items: center;
+gap: 5px;
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 24px;
+line-height: 36px;
+}
+
+.HelpGridSectionTwo{
+    width: 90%;
+    margin: auto;
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+.HelpGridSectionTwo>div{
+    box-sizing: border-box;
+    width: 288px;
+    height: 291px;
+    padding-top:10px;
+    padding-left: 10px;
+    margin: auto;
+    background: #FFFFFF;
+    border: 1px solid #D9D9D9;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    position: relative;
+}
+.HelpGridSectionTwo>div>p{
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 24px;
+margin-top: 0px;
+line-height: 36px;
+}
+.HelpGridSectionTwo>div>ul{
+    margin-top: -5px;
+    margin-left: -10px;
+}
+.HelpGridSectionTwo>div>ul>li{
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 24px;
+}
+.HelpGridSectionTwo>div>a{
+  
+    text-decoration: none;
+    color: #2A3A8F;
+}
+.HelpGridSectionTwo>div>a>div{
+position:absolute;
+/* left: 365px; */
+/* top: 425px;   */
+bottom: 0;
+display: flex;
+align-items: center;
+gap: 5px;
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 24px;
+line-height: 36px;
+}

@@ -1,0 +1,83 @@
+.TitleSection{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.TitleSection>button{
+    width: 121px;
+    height: 35px;
+    background: #2A3A8F;
+    color: white;
+    border-radius: 4px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    border: none;
+    cursor: pointer;
+}
+.CityMainDiv{
+    display: flex;
+    flex-wrap:wrap;
+    gap:10px;
+
+}
+.CityMainDiv>div>p{
+    text-align: center;
+}
+.CityMainDiv>div>button{
+    cursor: pointer;
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+    width: 151px;
+height: 40px;
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 700;
+font-size: 20px;
+line-height: 30px;
+
+color: #C5161D;
+background: #FFFFFF;
+border: 1px solid #C5161D;
+border-radius: 4px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  
+  label {
+    margin-top: 10px;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  input[type="tel"],
+  textarea {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: #3e8e41;
+  }
+  

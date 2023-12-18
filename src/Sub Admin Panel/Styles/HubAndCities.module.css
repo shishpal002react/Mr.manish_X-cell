@@ -1,0 +1,41 @@
+.TitleSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.TitleSection > button {
+  width: 121px;
+  height: 35px;
+  background: #2a3a8f;
+  color: white;
+  border-radius: 4px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  border: none;
+  cursor: pointer;
+}
+.CityMainDiv {
+  display: flex;
+  flex-wrap: wrap;
+  gap:20px;
+}
+.CityMainDiv > div > button {
+  display: block;
+  margin: auto;
+  margin-top: 20px;
+  width: 151px;
+  height: 40px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 30px;
+
+  color: #c5161d;
+  background: #ffffff;
+  border: 1px solid #c5161d;
+  border-radius: 4px;
+}

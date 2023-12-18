@@ -1,0 +1,461 @@
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0%;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.modalVisible {
+  display: block;
+  position: fixed;
+  z-index: 1;
+  left: 0%;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 999;
+}
+.ModalMainDiv {
+  position: absolute;
+  width: 90%;
+  /* height: 580px; */
+  top: 5%;
+  left: 5%;
+
+  margin: auto;
+  background: #ffffff;
+  /* border-top-left-radius:25px ;
+    border-bottom-right-radius:25px ;   */
+}
+
+.ModalTitleDiv {
+  display: flex;
+  width: 100%;
+  height: 106.85px;
+  background: #9daaef;
+  align-items: center;
+  justify-content: space-between;
+}
+.ModalTitleDiv > p {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 34.5363px;
+  line-height: 42px;
+  margin: 20px;
+}
+.CloseICon {
+  cursor: pointer;
+  margin: 20px;
+}
+
+.UpdateModalCloseICon {
+  position: relative;
+  left: 92%;
+  margin: 10px;
+  cursor: pointer;
+}
+.ModalMainDiv > button {
+  height: 64px;
+  display: block;
+  width: 360px;
+  margin: auto;
+  margin-top: 50px;
+  background: #2a3a8f;
+  border-radius: 16px;
+  border: none;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 30px;
+  cursor: pointer;
+  color: white;
+}
+.Main {
+  display: flex;
+  width: 95%;
+  margin: auto;
+  /* border: 1px solid red; */
+  margin-top: 20px;
+  margin-bottom: 20px;
+  gap: 30px;
+}
+.MainFirstDiv {
+  width: 60%;
+}
+.MainSecondDiv {
+  width: 40%;
+  background: #9daaef;
+  padding-left: 40px;
+  /* text-align: center; */
+}
+.ProductImg {
+  width: 415.51px;
+  height: 294.64px;
+  border-radius: 8.63406px;
+}
+.MainSecondDiv > h2 {
+  font-family: "Poppins";
+  font-style: normal;
+  /* text-align: left; */
+  font-weight: 700;
+  font-size: 25.9022px;
+  line-height: 31px;
+
+  color: #2a3a8f;
+}
+.MainSecondDiv > div > div {
+  display: flex;
+  width: 50%;
+  /* border: 1px solid red; */
+  justify-content: flex-start;
+  /* text-align: center; */
+}
+.MainSecondDiv > div {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  /* gap: 50px; */
+  margin-top: -10px;
+}
+.TabTitle {
+  display: flex;
+  /* width: 114px; */
+  gap: 40px;
+  width: max-content;
+  height: 36px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 36px;
+  border-bottom: 3px solid rgba(42, 58, 143, 0.5);
+  /* margin-bottom: -7px; */
+  color: rgba(0, 0, 0, 0.5);
+}
+.TabTitle > div {
+  height: 100%;
+  cursor: pointer;
+}
+.active,
+.btn:hover {
+  color: #2a3a8f;
+  border-bottom: 3px solid #2a3a8f;
+  /* color: white; */
+}
+
+.customerSectionBtn {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+}
+.customerSectionBtn > button {
+  width: 199px;
+  height: 43px;
+  background: #2a3a8f;
+  color: white;
+  border-radius: 4px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  border: none;
+  cursor: pointer;
+  margin: 10px;
+}
+.StatusTrackMainDiv {
+  display: flex;
+  gap: 50px;
+  /* justify-content: space-between; */
+}
+.StatusTrackMainDiv > div {
+  display: flex;
+  flex-direction: column;
+}
+.StatusDateBig > h1 {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 25.9022px;
+  line-height: 39px;
+  text-align: center;
+}
+
+.StatusDateBig > p {
+  margin-top: -20px;
+  text-align: center;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 26px;
+}
+.StatusDateSmall > h1 {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 26px;
+  text-align: center;
+}
+.StatusDateSmall > p {
+  margin-top: -10px;
+  text-align: center;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 26px;
+}
+
+.StatusTrackSecondDiv {
+  display: flex;
+  /* gap: 10px ; */
+  margin-top: 15px;
+  margin-left: 20px;
+  align-items: center;
+  border-left: 2px solid #00bb13;
+  padding-left: 10px;
+}
+.StatusTrackSecondDiv > p {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 25.9022px;
+  margin-top: 5px;
+  color: #00bb13;
+}
+.StatusTrackSecondDivIcons {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  /*  left: 144.62px;
+top: 277.37px;*/
+  border-radius: 50%;
+  background: #00bb13;
+}
+.StatusTrackSecondDivSmall {
+  display: flex;
+  /* gap: 10px ; */
+  /* margin-top: 15px; */
+  margin-left: 25px;
+  align-items: center;
+  border-left: 2px solid #00bb13;
+  padding-left: 10px;
+  padding-top: 10px;
+  padding-bottom: 40px;
+  margin-bottom: -15px;
+}
+.StatusTrackSecondDivSmallIcons {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  left: -27px;
+  /*  left: 144.62px;
+top: 277.37px;*/
+  border-radius: 50%;
+  background: #00bb13;
+}
+.StatusTrackSecondDivSmall > p {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 17px;
+  margin-top: 5px;
+  color: #00bb13;
+  margin-left: 50px;
+}
+
+.StatusTrackSecondDivRed {
+  display: flex;
+  /* gap: 10px ; */
+  /* margin-top: 15px; */
+  margin-left: 25px;
+  align-items: center;
+  border-left: 2px solid red;
+  padding-left: 10px;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  margin-bottom: -15px;
+}
+.StatusTrackSecondDivRed > p {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 25.9022px;
+  line-height: 39px;
+  color: #c5161d;
+  /* margin-top: 10px; */
+}
+.StatusTrackSecondDivRedIcons {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 77.71px;
+  height: 77.71px;
+  left: -50px;
+  /*  left: 144.62px;
+top: 277.37px;*/
+  /* margin-top: 10px; */
+  border-radius: 50%;
+  background: #ffffff;
+  border: 1px solid #c5161d;
+}
+.StatusTrackSecondDivRedSmall {
+  display: flex;
+  /* gap: 10px ; */
+  /* margin-top: 15px; */
+  margin-left: 25px;
+  align-items: center;
+  border-left: 2px solid #c5161d;
+  padding-left: 10px;
+  /* padding-top: 10px; */
+  padding-bottom: 50px;
+  margin-bottom: -15px;
+}
+.StatusTrackSecondDivRedSmall > p {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 17px;
+  margin-top: 5px;
+  color: #c5161d;
+  margin-left: 50px;
+}
+.StatusTrackSecondDivRedSmallIcons {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  left: -27px;
+  /*  left: 144.62px;
+top: 277.37px;*/
+  border-radius: 50%;
+  background: #c5161d;
+}
+.StatusTrackSecondDivRedLast {
+  display: flex;
+  /* gap: 10px ; */
+  /* margin-top: 15px; */
+  margin-left: 25px;
+  height: 9%;
+  align-items: center;
+  border-left: 2px solid red;
+  padding-left: 10px;
+  /* padding-top: 10px; */
+  /* padding-bottom: -10px; */
+  /* margin-bottom: -15px;  */
+}
+.StatusTrackSecondDivRedLast > p {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 25.9022px;
+  line-height: 39px;
+  color: #c5161d;
+  /* margin-top: 10px; */
+}
+
+.OrderUpdateModalMainDiv {
+  position: absolute;
+  width: 50%;
+  /* height: 580px; */
+  top: 30%;
+  left: 25%;
+  margin: auto;
+  z-index: 999;
+  background: #ffffff;
+  padding-left: 10px;
+}
+.OrderUpdateModalMainDiv > p {
+  margin-top: 0px;
+  margin-left: 20px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+}
+.OrderUpdateModalMainDiv > div {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: auto;
+  margin-left: 20px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+.OrderUpdateModalMainDiv > div > button {
+  height: 35px;
+  display: block;
+  width: 120px;
+  /* margin: auto; */
+  background: #2a3a8f;
+  border-radius: 4px;
+  border: none;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  cursor: pointer;
+  color: white;
+}
+.OrderUpdateModalMainDiv > input {
+  width: 675px;
+  height: 66px;
+  background: #ffffff;
+  border: 1px solid #d9d9d9;
+  border-radius: 8px;
+  margin-left: 20px;
+}
+.submitBtn {
+  height: 40px;
+  display: block;
+  width: 185px;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background: #2a3a8f;
+  border-radius: 4px;
+  border: none;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  cursor: pointer;
+  color: white;
+}
+
+.Ordercont {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+.orderitm{
+    width:24%;
+}

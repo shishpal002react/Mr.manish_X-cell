@@ -1,0 +1,110 @@
+.inputBoxMainDiv {
+  display: flex;
+  width: 90%;
+  margin: auto;
+  justify-content: space-between;
+}
+.inputBoxMainDiv > button {
+  width: 121px;
+  height: 35px;
+  background: #2a3a8f;
+  color: white;
+  border-radius: 4px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  border: none;
+  cursor: pointer;
+}
+.inputBox {
+  width: 285px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  background: #ffffff;
+  border: 1px solid #2a3a8f;
+  padding: 5px;
+}
+
+.inputBox > input {
+  width: 90%;
+  height: 100%;
+  font-family: "Poppins";
+  border: none;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 24px;
+  color: rgba(0, 0, 0, 0.5);
+}
+.inputBox > input:focus {
+  outline: none;
+  background: transparent;
+}
+
+.branchListDiv {
+  width: 90%;
+  margin: auto;
+  /* margin-top: 20px; */
+}
+.BranchList {
+  display: flex;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 10px;
+  height: 99px;
+  background: #ffffff;
+  border: 1px solid #d9d9d9;
+  margin-top: 15px;
+}
+.BranchList > div > h2 {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  margin-top: 0px;
+  font-size: 28px;
+  line-height: 42px;
+}
+.BranchList > div > p {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  margin-top: -15px;
+  color: rgba(0, 0, 0, 0.5);
+}
+.BranchList > button {
+  width: 88px;
+  height: 35px;
+  background: #2a3a8f;
+  color: white;
+  border-radius: 4px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  border: none;
+  cursor: pointer;
+}
+
+.BranchCont {
+  margin: 5%;
+  border: 1px solid #333;
+  height: 80px;
+  border: 1px solid #2a3a8f;
+  border-radius: 12px;
+}
+.BranchCont p{
+  padding: 3% 3%;
+  font-size:20px;
+}
+
+.Branchdet{
+  width:100%;
+}

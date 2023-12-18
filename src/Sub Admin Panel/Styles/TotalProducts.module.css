@@ -1,0 +1,114 @@
+.TitleSection{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.TitleSection>button{
+    height: 34px;
+display: block;
+width: 140px;
+
+background: #2A3A8F;
+border-radius: 4px;
+border: none;
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 24px;
+cursor: pointer;
+color: white;
+}
+.ProductMain{
+    width: 90%;
+    margin: auto;
+}
+.TabTitle{
+    display: flex;
+    /* width: 114px; */
+    gap: 40px;   
+  height: 36px;
+  margin: 10px;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 36px;
+  margin-bottom: -7px;
+  color: rgba(0, 0, 0, 0.5);
+  }
+.ProductMain>p{
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 24px;
+margin-top: -10px;
+line-height: 36px;
+}
+.TabTitle>div{
+    height: 100%;
+    cursor: pointer;
+  }
+  .active, .btn:hover {
+   color: #2A3A8F;
+   border-bottom: 3px solid #2A3A8F;
+    /* color: white; */
+  }
+  .tableDiv{
+    width: 95%;
+    margin: auto;
+    margin-top: 20px;
+}
+  .tableDiv>table{
+    width: 100%;
+  }
+
+  .tableDiv>table thead tr th {
+  width: 20%;
+  text-align: left;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  }
+  
+  .tableDiv>table tbody tr td {
+    width: 15%;
+    text-align: left;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px; 
+    color: rgba(0, 0, 0, 0.5);
+  }
+  .IconSearch{
+    cursor: pointer;
+    font-size: 24px;
+    color: #2A3A8F;
+    width: 15%;
+  }
+  .InputBox{
+display: flex;
+width: 476px;
+height: 36px;
+background: #FFFFFF;
+border: 1px solid #2A3A8F;
+align-items: center;
+margin-top: 20px;
+  }
+  .InputBox>input{
+    width: 90%;
+    /* height: 100%; */
+    font-family: 'Poppins';
+    border: none;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 24px;
+  color: rgba(0, 0, 0, 0.5);
+  }
+  .InputBox>input:focus{
+    outline: none;
+  }

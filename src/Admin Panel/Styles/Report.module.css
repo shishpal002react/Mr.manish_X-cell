@@ -1,0 +1,86 @@
+.ReportGraph{
+box-sizing: border-box;
+width: 90%;
+margin: auto;
+height: auto;
+background: #FFFFFF;
+border: 1px solid #D9D9D9;
+border-radius: 8px;
+padding: 10px;
+}
+.ReportGraph>div{
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.ReportGraph>div>div{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.ReportGraph>div>div>select{
+   
+width: 132px;
+height: 32px;
+background: #FFFFFF;
+border: 1px solid #D9D9D9;
+border-radius: 4px;
+text-align: center;
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 24px;
+}
+.Title{
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 24px;
+line-height: 36px;
+}
+.ReportGraph>div>p{
+    margin-top: 0px;
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 24px;
+line-height: 36px;
+}
+
+.tableDiv{
+    /* width: 95%; */
+    margin: auto;
+    margin-top: 20px;
+}
+  .tableDiv>table{
+    width: 100%;
+  }
+
+  .tableDiv>table thead tr th {
+  width: 10%;
+  text-align: center;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+font-size: 16px;
+line-height: 24px;
+  }
+  
+  .tableDiv>table tbody tr td {
+    width: 10%;
+    text-align: center;
+    font-family: 'Poppins';
+    font-weight: 500;
+   
+font-size: 16px;
+line-height: 24px;
+    color: rgba(0, 0, 0, 0.5);
+    /* margin-left: 55px; */
+  }
+  .tableDiv>table tbody tr td>div{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }

@@ -1,0 +1,153 @@
+.mainOrder>p{
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 24px;
+line-height: 36px;
+margin-top: -10px;
+}
+
+.TabTitle{
+    display: flex;
+    /* width: 114px; */
+    gap: 40px;
+   
+  height: 36px;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 36px;
+  margin-bottom: -7px;
+  color: rgba(0, 0, 0, 0.5);
+  }
+  .TabTitle>div{
+    height: 100%;
+    cursor: pointer;
+  }
+  .active, .btn:hover {
+   color: #2A3A8F;
+   border-bottom: 3px solid #2A3A8F;
+    /* color: white; */
+  }
+  .filterSection{
+    display: flex;
+    justify-content: space-between;
+    /* gap: 20px; */
+    margin-top: 20px;
+  }
+  .filterSection>div{
+    /* background: red; */
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  .filterSection>div:first-child{
+    width: 70%;
+  }
+  .filterSection>div:last-child{
+    gap: 30px;
+  }
+  .filterSection>div>div{
+    box-sizing: border-box;
+  height: 36px;
+  width: 476px;
+  background: #FFFFFF;
+  border: 1px solid #2A3A8F;
+  display: flex;
+  padding: 10px;
+  gap: 20px;
+  align-items: center;
+  }
+  .filterSection>div>div>input{
+    width: 90%;
+    height: 100%;
+    font-family: 'Poppins';
+    border: none;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 24px;
+  color: rgba(0, 0, 0, 0.5);
+  }
+  .filterSection>div>div>input:focus{
+    outline: none;
+    background: transparent;
+  }
+  .filterSectionIconSearch{
+    cursor: pointer;
+    font-size: 24px;
+    color: #2A3A8F;
+    width: 15%;
+  }
+  
+  .filterSection>div>button
+  {
+    width: 88px;
+  height: 35px;
+  background: #2A3A8F;
+  color: white;
+  border-radius: 4px;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  border: none;
+  cursor: pointer;
+  }
+  .filterSectionIconBtn{
+    font-size: 18px;
+    margin-left: -2px;
+    font-weight: bold;
+    margin-right: 2px;
+  }
+  .filterSectionIcon{
+    font-size: 25px;
+    cursor: pointer;
+    margin-right: -10px;
+  }
+  .MainTableDiv>table{
+    width: 100%;
+    margin-top: 20px;
+   
+  }
+
+  .MainTableDiv>table thead tr th {
+  /* width: 10%; */
+  text-align: center;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  }
+  
+ 
+  .MainTableDiv>table tbody tr td {
+    /* width: 10%; */
+    text-align: center;
+    font-family: 'Poppins';
+    height: 50px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px; 
+    color: rgba(0, 0, 0, 0.5);
+  
+  }
+  
+  .MainTableDiv>table tbody tr td button{
+    width: 88px;
+    height: 35px;
+    background: #2A3A8F;
+    color: white;
+    border-radius: 4px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    border: none;
+    cursor: pointer;
+  }

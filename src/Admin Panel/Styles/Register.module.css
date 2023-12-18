@@ -1,0 +1,128 @@
+.main{
+    margin: auto;
+    width: 740px;
+    height: 612px;
+    margin-top: 60px;
+    /* margin-bottom: 110px; */
+    background: #9DAAEF;
+    border-top-left-radius:25px ;
+    border-bottom-right-radius:25px ;
+    }
+    .Title{
+    text-align: center;
+    padding-top: 20px;
+    margin-bottom: 5px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 54px;
+    }
+.inputParent{
+    display: flex;
+    margin: auto;
+    width: 75%;
+    justify-content: space-between;
+}
+.inputBox{
+    height: 64px;
+    width: 265px;
+    background: #FFFFFF;
+border: 1px solid #9DAAEF;
+border-radius: 4px;
+box-sizing: border-box;
+margin-top: 15px; 
+padding: 10px 20px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+.inputBox>input{
+color: rgba(0, 0, 0, 0.5);
+border: none;
+height: 100%;
+width: 80%;
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 300;
+font-size: 16px;
+line-height: 24px;
+background:transparent
+}
+.inputBox>input:focus{
+    outline: none;
+    background: transparent;
+}
+.passeye{
+    cursor: pointer;
+}
+.inputBox>select{
+    border: none;
+    height: 100%;
+    width: 100%;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 24px;
+color: gray;
+}
+.inputBox>select:focus{
+    outline: none;
+}
+.lastDiv{
+    width: 75%;
+    margin: auto;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.lastDiv>input{
+    width: 24px;
+height: 24px;
+display: block;
+}
+.lastDiv>p{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+}
+.lastDiv>p>a{
+    font-weight: bold;
+    color: #C5161D;
+}
+.main>button{
+    width: 360px;
+    height: 64px;
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+    background: #2A3A8F;
+    border-radius: 16px;
+    border: none;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 30px;
+    cursor: pointer;
+    color: white;
+    }
+.loginText{
+    width: 75%;
+    margin: auto;
+    text-align: end;
+}
+.loginText>p{
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 24px;
+}
+.loginText>p>a{
+    color: #C5161D;
+    font-weight: bold;
+}

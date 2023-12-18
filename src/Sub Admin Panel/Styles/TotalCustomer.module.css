@@ -1,0 +1,233 @@
+.inputBoxMainDiv{
+    display: flex;
+    width: 90%;
+    margin: auto;
+    justify-content: space-between;
+}
+.inputBoxMainDiv>button
+{
+  width: 141px;
+height: 35px;
+background: #2A3A8F;
+color: white;
+border-radius: 4px;
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 24px;
+border: none;
+cursor: pointer;
+}
+.inputBox{
+    width:486px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    background: #FFFFFF;
+    border: 1px solid #2A3A8F;
+    padding: 5px;
+}
+
+.inputBox>input{
+    width: 90%;
+    height: 100%;
+    font-family: 'Poppins';
+    border: none;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 24px;
+  color: rgba(0, 0, 0, 0.5);
+  }
+  .inputBox>input:focus{
+    outline: none;
+    background: transparent;
+  }
+  .TabTitle{
+    display: flex;
+    /* width: 114px; */
+    gap: 40px;   
+  height: 36px;
+  margin: 10px;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 36px;
+  margin-bottom: -7px;
+  color: rgba(0, 0, 0, 0.5);
+  }
+  .CustomerMain{
+    width: 90%;
+    margin: auto;
+    /* margin-top: 50px; */
+    
+    /* height: 500px; */
+    padding-bottom: 20px;
+  }
+  .CustomerMain>p{
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 24px;
+line-height: 36px;
+  }
+
+  .TabTitle>div{
+    height: 100%;
+    cursor: pointer;
+  }
+  .active, .btn:hover {
+   color: #2A3A8F;
+   border-bottom: 3px solid #2A3A8F;
+    /* color: white; */
+  }
+  .tableDiv{
+    width: 95%;
+    margin: auto;
+}
+  .tableDiv>table{
+    width: 100%;
+  }
+
+  .tableDiv>table thead tr th {
+  width: 15%;
+  text-align: left;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  }
+  
+  .tableDiv>table tbody tr td {
+    width: 15%;
+    text-align: left;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px; 
+    color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .modal{
+    display: none;
+  position: fixed;
+  z-index: 1; 
+  left: 0%;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto;
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.4); 
+}
+.modalVisible{
+    display :block;
+    position: fixed;
+    z-index: 1; 
+    left: 0%;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto;
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+}
+.ModalMainDiv{
+    position:absolute;
+    margin: auto;
+    width: 924px;
+    /* height: 580px; */
+    top: 8%;
+    left: 20%;
+    /* bottom: 2%; */
+    padding: 30px;
+    /* margin-top: 60px; */
+    background: #FFFFFF;
+    border-top-right-radius:25px ;
+    border-bottom-left-radius:25px ;  
+}
+
+.CloseICon{
+    position: absolute;
+    left: 2%;
+    top: 4%;
+    cursor: pointer;
+}
+.ModalTitleDiv{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -20px;
+
+}
+.ModalTitleDiv>h2{
+  
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 24px;
+line-height: 36px;
+}
+
+
+.ModalMainDiv>button{
+height: 64px;
+display: block;
+width: 360px;
+margin: auto;
+margin-top: 50px;
+background: #2A3A8F;
+border-radius: 16px;
+border: none;
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 700;
+font-size: 20px;
+line-height: 30px;
+cursor: pointer;
+color: white;
+}
+
+.mainInfoDiv{
+  display: flex;
+  justify-content: space-around;
+}
+.mainInfoDiv>div>p{
+  font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 24px;
+}
+.mainInfoDiv>div:last-child{
+  width: 60%;
+}
+.mainInfoSecondDiv{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+.mainInfoSecondDiv>div{
+  text-align: left;
+  width: 30%;
+}
+.mainInfoSecondDiv>div>h2{
+  font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 24px;
+margin-top: -10px;
+}
+.mainInfoSecondDiv>div>p{
+  font-family: 'Poppins';
+font-style: normal;
+font-weight: 300;
+font-size: 12px;
+line-height: 18px;
+}

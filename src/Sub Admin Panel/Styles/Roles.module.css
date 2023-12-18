@@ -1,0 +1,117 @@
+.RoleMain{
+    width: 90%;
+    margin: auto;
+    margin-top: 50px;
+    border: 1px solid #d9d9d9;
+    /* height: 500px; */
+    padding-bottom: 20px;
+}
+.SearchBox{
+    margin: 20px;
+    display: flex;
+    width: 70%;
+    justify-content: space-around;
+    align-items: center;
+}
+.SearchBox>div{
+    width: 544px;
+height: 37px;
+background: #FFFFFF;
+border: 1px solid #2A3A8F;
+padding: 10px;
+display: flex;
+align-items: center;
+}
+.SearchBox>div>input{
+    width: 90%;
+  height: 100%;
+  font-family: 'Poppins';
+  border: none;
+font-style: normal;
+font-weight: 300;
+font-size: 16px;
+line-height: 24px;
+color: rgba(0, 0, 0, 0.5);
+}
+.SearchBox>div>input:focus{
+    outline: none;
+  background: transparent;
+}
+.SearchIcon{
+    cursor: pointer;
+    font-size: 24px;
+    color: #2A3A8F;
+    width: 10%;
+}
+.SearchBox>button{
+    width: 88px;
+    height: 35px;
+    background: #2A3A8F;
+    color: white;
+    border-radius: 4px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    border: none;
+    cursor: pointer;
+}
+.TabTitle{
+    display: flex;
+    /* width: 114px; */
+    gap: 40px;   
+  height: 36px;
+  margin: 10px;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 36px;
+  margin-bottom: -7px;
+  color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .TabTitle>div{
+    height: 100%;
+    cursor: pointer;
+  }
+  .active, .btn:hover {
+   color: #2A3A8F;
+   border-bottom: 3px solid #2A3A8F;
+    /* color: white; */
+  }
+.tableDiv{
+    width: 95%;
+    margin: auto;
+}
+  .tableDiv>table{
+    width: 100%;
+  }
+
+  .tableDiv>table thead tr th {
+  width: 10%;
+  text-align: left;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 36px;
+  }
+  
+  .tableDiv>table tbody tr td {
+    width: 10%;
+    text-align: left;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px; 
+    color: rgba(0, 0, 0, 0.5);
+  }
+  .tableDiv>table tbody tr td>div{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
