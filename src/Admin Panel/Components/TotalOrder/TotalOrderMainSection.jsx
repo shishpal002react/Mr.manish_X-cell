@@ -8,7 +8,7 @@ import { BsFilterLeft } from "react-icons/bs";
 import { FiFilter } from "react-icons/fi";
 import { useDispatch, useSelector } from "react-redux";
 import { getAllOrders } from "../../../Redux/Auth/action";
-import Button from "react-bootstrap/Button";
+import { Button, Form } from "react-bootstrap";
 import Modal from "react-bootstrap/Modal";
 import "bootstrap/dist/css/bootstrap.min.css";
 import axios from "axios";
@@ -79,7 +79,7 @@ export const TotalOrderMainSection = () => {
 
   function MyVerticallyCenteredModal(props) {
     const ud = localStorage.getItem("token");
-    //const [branch, setBranch] = useState("");
+    const [customer, setCustomers] = useState([]);
     const [name, setName] = useState("");
     const [customerId, setCid] = useState("");
     const [order_id, setOid] = useState("");
@@ -116,12 +116,39 @@ export const TotalOrderMainSection = () => {
         );
         console.log(res?.data);
         navigate("/totalorders");
-        getAllOrders();
+        toast.success("Order is create successfully");
+        dispatch(getAllOrders());
+        props.onHide();
+
         //  dispatch(GetBranches());
+      } catch (err) {
+        toast.error(
+          err?.data?.response?.message || "An unknown error occurred"
+        );
+      }
+    };
+
+    //tota; order
+    const url = "https://mr-manish-xcell-backend.vercel.app/api/v1/users";
+
+    const getAllUsers = async () => {
+      const token = localStorage.getItem("token");
+      try {
+        const res = await axios.get(url, {
+          headers: { Authorization: `Bearer ${token}` },
+        });
+        setCustomers(res?.data?.data);
       } catch (err) {
         console.log(err.message);
       }
     };
+
+    useEffect(() => {
+      if (props.show === true) {
+        getAllUsers();
+      }
+    }, [props]);
+
     //console.log(branch);
     return (
       <Modal
@@ -137,18 +164,34 @@ export const TotalOrderMainSection = () => {
         </Modal.Header>
         <Modal.Body>
           <form onSubmit={handleClick}>
-            <label>Patient Name</label>
+            {/* <label>Patient Name</label>
             <input
               type="text"
               onChange={(e) => setName(e.target.value)}
               required
-            />
-            <label>Patient Id</label>
+            /> */}
+            <label>Patient Name</label>
             <input
               type="text"
-              onChange={(e) => setCid(e.target.value)}
+              value={name}
+              onChange={(e) => setName(e.target.value)}
               required
             />
+            <label>Patient Id</label>
+            <Form.Select
+              className="mb-3"
+              onChange={(e) => {
+                setCid(e.target.value);
+              }}
+            >
+              <option>Select Patient</option>
+              {customer?.map((i, index) => (
+                <option value={i.customerId} key={index}>
+                  {`${i.firstName} ${i.middleName} ${i.lastName} Patient Id :${i.customerId}`}
+                </option>
+              ))}
+            </Form.Select>
+
             <label>Order Id</label>
             <input
               type="text"
@@ -159,7 +202,7 @@ export const TotalOrderMainSection = () => {
             <input
               type="text"
               onChange={(e) => setOtype(e.target.value)}
-              placeholder="9999...."
+              placeholder="Example Medical ..."
               required
             />
 
