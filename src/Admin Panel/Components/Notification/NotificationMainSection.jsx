@@ -108,6 +108,7 @@ export const NotificationMainSection = () => {
           }
         );
         getNotifications();
+        toast.success("Notification is update successfully");
         props.onHide();
       } catch (err) {
         console.log(err.message);
@@ -131,7 +132,6 @@ export const NotificationMainSection = () => {
               <Form.Label>Title</Form.Label>
               <Form.Control
                 type="text"
-                required
                 onChange={(e) => setTitle(e.target.value)}
               />
             </Form.Group>
@@ -139,7 +139,6 @@ export const NotificationMainSection = () => {
               <Form.Label>Link</Form.Label>
               <Form.Control
                 type="text"
-                required
                 onChange={(e) => setLink(e.target.value)}
               />
             </Form.Group>
@@ -147,7 +146,6 @@ export const NotificationMainSection = () => {
               <Form.Label>Message</Form.Label>
               <Form.Control
                 type="text"
-                required
                 onChange={(e) => setMessage(e.target.value)}
               />
             </Form.Group>
@@ -192,6 +190,7 @@ export const NotificationMainSection = () => {
         headers: { Authorization: `Bearer ${token}` },
       });
       getNotifications();
+      toast.success("Notification Delete successfully");
     } catch (err) {
       console.log(err.message);
     }

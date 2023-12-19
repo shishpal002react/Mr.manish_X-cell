@@ -13,12 +13,14 @@ import Modal from "react-bootstrap/Modal";
 import "bootstrap/dist/css/bootstrap.min.css";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 
 export const TotalOrderMainSection = () => {
   const [tab, setTab] = useState("all");
   const orders = useSelector((state) => state.AuthReducer.orders);
   const navigate = useNavigate();
   //console.log(orders);
+  const BaseUrl = "https://mr-manish-xcell-backend.vercel.app/";
   const [order, setOrder] = useState([]);
   const dispatch = useDispatch();
   useEffect(() => {
@@ -202,6 +204,19 @@ export const TotalOrderMainSection = () => {
     );
   }
 
+  /// delete order
+  const handleDeleteOrder = async (o_id) => {
+    await axios.delete(`${BaseUrl}api/v1/admin/orders/${o_id}`, {
+      headers: {
+        Authorization: `Bearer ${localStorage.getItem("token")}`,
+      },
+    });
+    dispatch(getAllOrders());
+    toast.success("Order delete Successfully", {
+      position: "top-center",
+    });
+  };
+
   return (
     <div className={stylesfromDash.mainSection}>
       <MainInfo />
@@ -275,6 +290,7 @@ export const TotalOrderMainSection = () => {
                 <th>Order Date</th>
                 <th>Total Amount</th>
                 <th>Total Packages</th>
+                <th>Delete</th>
               </tr>
             </thead>
             <tbody>
@@ -292,6 +308,10 @@ export const TotalOrderMainSection = () => {
                         <td>{ele?.createdAt}</td>
                         <td>{ele?.totalAmount}</td>
                         <td>{ele?.totalPackages}</td>
+                        <button onClick={() => handleDeleteOrder(ele?._id)}>
+                          Delete
+                        </button>
+                        <td></td>
                       </tr>
                     </>
                   ))

@@ -19,7 +19,7 @@ export const TotalCustomerMainSection = () => {
   const [CustomerInfoModal, setCustomerInfoModal] = useState(false);
   const [addCustModal, setAddCustModal] = useState(false);
   const [customers, setCustomers] = useState([]);
-  const [query, setQuery] = useState();
+  const [query, setQuery] = useState("");
 
   let newCustomer = [];
   const HandleModal = () => {
@@ -55,8 +55,15 @@ export const TotalCustomerMainSection = () => {
     ? customers
     : customers.filter((item) => {
         return (
-          item?.middleName?.toLowerCase()?.includes(query?.toLowerCase()) ||
-          item?.lastName?.toLowerCase()?.includes(query.toLowerCase())
+          item?.middleName
+            ?.toString()
+            ?.toLowerCase()
+            ?.includes(query?.toLowerCase()) ||
+          item?.lastName
+            ?.toString()
+            ?.toLowerCase()
+            ?.includes(query.toLowerCase()) ||
+          item?.phone?.toString()?.toLowerCase()?.includes(query.toLowerCase())
         );
       });
 
@@ -64,8 +71,15 @@ export const TotalCustomerMainSection = () => {
     ? newCustomer
     : newCustomer?.filter((item) => {
         return (
-          item?.middleName?.toLowerCase()?.includes(query?.toLowerCase()) ||
-          item?.lastName?.toLowerCase()?.includes(query?.toLowerCase())
+          item?.middleName
+            ?.toString()
+            ?.toLowerCase()
+            ?.includes(query?.toLowerCase()) ||
+          item?.lastName
+            ?.toString()
+            ?.toLowerCase()
+            ?.includes(query?.toLowerCase()) ||
+          item?.phone?.toString()?.toLowerCase()?.includes(query?.toLowerCase())
         );
       });
 
@@ -370,6 +384,7 @@ export const TotalCustomerMainSection = () => {
                       <td>{ele.lastName}</td>
 
                       <td>{ele.firstLineAddress + ele.secondLineAddress}</td>
+                      <td>{ele?.phone}</td>
                       <td>{ele.state}</td>
                       <td>{ele.district}</td>
                       <td>{ele.pincode}</td>

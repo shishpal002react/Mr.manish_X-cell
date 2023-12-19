@@ -113,15 +113,15 @@ function MyVerticallyCenteredModal(props) {
   );
 }
 
-
 export const TotalProductMainSection = () => {
   const [tab, setTab] = useState("all");
-  const [p_id,setP_id]=useState("");
+  const [p_id, setP_id] = useState("");
   const [searchData, setSearchData] = useState([]);
   const [modalShow, setModalShow] = React.useState(false);
   const [modalShowEditProduct, setModalShowEditProduct] = React.useState(false);
   const dispatch = useDispatch();
   var products = useSelector((state) => state.AuthReducer.products);
+
   const HandleSearch = (e) => {
     const { value } = e.target;
     if (value === "") {
@@ -157,142 +157,141 @@ export const TotalProductMainSection = () => {
     }
   };
 
-//edit product screen
-function MyVerticallyCenteredModalForEditOrder(props) {
-  const ud = localStorage.getItem("token");
-  const [productId, setPid] = useState("");
-  const [productName, setPname] = useState("");
-  const [stock, setStock] = useState("");
-  const [quantity, setQ] = useState("");
-  const [price, setPrice] = useState("");
-  const image = "https://i.mydramalist.com/R6W7x_5f.jpg";
-  
-  //console.log(image, productId, productName, stock, quantity, price);
-  const dispatch = useDispatch();
+  //edit product screen
+  function MyVerticallyCenteredModalForEditOrder(props) {
+    const ud = localStorage.getItem("token");
+    const [productId, setPid] = useState("");
+    const [productName, setPname] = useState("");
+    const [stock, setStock] = useState("");
+    const [quantity, setQ] = useState("");
+    const [price, setPrice] = useState("");
+    const image = "https://i.mydramalist.com/R6W7x_5f.jpg";
 
-  useEffect(() => {
-    const fetchData = async () => {
+    //console.log(image, productId, productName, stock, quantity, price);
+    const dispatch = useDispatch();
+
+    useEffect(() => {
+      const fetchData = async () => {
+        try {
+          const { data } = await axios.get(
+            `https://mr-manish-xcell-backend.vercel.app/api/v1/products/${p_id}`,
+            {
+              headers: {
+                Authorization: `Bearer ${ud}`,
+              },
+            }
+          );
+          setPid(data.data.productId);
+          setPname(data.data.productName);
+          setStock(data.data.stock);
+          setQ(data.data.quantity);
+          setPrice(data.data.price);
+          console.log(data);
+          console.log(image, productId, productName, stock, quantity, price);
+        } catch (err) {
+          console.log(err);
+        }
+      };
+      fetchData();
+    }, [p_id]);
+
+    const url = `https://mr-manish-xcell-backend.vercel.app/api/v1/admin/products/${p_id}`;
+    const handleClick = async (e) => {
+      e.preventDefault();
       try {
-        const { data } = await axios.get(`https://mr-manish-xcell-backend.vercel.app/api/v1/products/${p_id}`, {
-          headers: {
-            Authorization: `Bearer ${ud}`,
-          },
-        });
-        setPid(data.data.productId);
-        setPname(data.data.productName);
-        setStock(data.data.stock);
-        setQ(data.data.quantity);
-        setPrice(data.data.price);
-        console.log(data);
-        console.log(image, productId, productName, stock, quantity, price);
+        const res = await axios.put(
+          url,
+          { image, productId, productName, stock, quantity, price },
+          {
+            headers: {
+              Authorization: `Bearer ${ud}`,
+            },
+          }
+        );
+        console.log(res?.data);
+        dispatch(getAllProducts());
+        props.onHide();
       } catch (err) {
-       console.log(err);
+        console.log(err.message);
       }
     };
-    fetchData();
-  }, [p_id]);
 
+    return (
+      <Modal
+        {...props}
+        size="lg"
+        aria-labelledby="contained-modal-title-vcenter"
+        centered
+      >
+        <Modal.Header closeButton>
+          <Modal.Title id="contained-modal-title-vcenter">
+            Modal heading
+          </Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <form onSubmit={handleClick}>
+            <label>Product Id</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              value={productId}
+              required
+              onChange={(e) => setPid(e.target.value)}
+            />
 
-  const url =
-    `https://mr-manish-xcell-backend.vercel.app/api/v1/admin/products/${p_id}`;
-  const handleClick = async (e) => {
-    e.preventDefault();
-    try {
-      
-      const res = await axios.put(
-        url,
-        { image, productId, productName, stock, quantity, price },
-        {
-          headers: {
-            Authorization: `Bearer ${ud}`,
-          },
-        }
-      );
-      console.log(res?.data);
-      dispatch(getAllProducts());
-      props.onHide();
-    } catch (err) {
-      console.log(err.message);
-    }
-  };
+            <label>Product Name</label>
+            <input
+              type="text"
+              id="email"
+              name="email"
+              value={productName}
+              required
+              onChange={(e) => setPname(e.target.value)}
+            />
 
-  return (
-    <Modal
-      {...props}
-      size="lg"
-      aria-labelledby="contained-modal-title-vcenter"
-      centered
-    >
-      <Modal.Header closeButton>
-        <Modal.Title id="contained-modal-title-vcenter">
-          Modal heading
-        </Modal.Title>
-      </Modal.Header>
-      <Modal.Body>
-      
-        <form onSubmit={handleClick}>
-          <label>Product Id</label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            value={productId}
-            required
-            onChange={(e) => setPid(e.target.value)}
-          />
+            <label>Stock</label>
+            <input
+              type="text"
+              id="password"
+              name="password"
+              value={stock}
+              required
+              onChange={(e) => setStock(e.target.value)}
+            />
 
-          <label>Product Name</label>
-          <input
-            type="text"
-            id="email"
-            name="email"
-            value={productName}
-            required
-            onChange={(e) => setPname(e.target.value)}
-          />
-
-          <label>Stock</label>
-          <input
-            type="text"
-            id="password"
-            name="password"
-            value={stock}
-            required
-            onChange={(e) => setStock(e.target.value)}
-          />
-
-          <label>Quantity</label>
-          <input
-            type="text"
-            id="phone"
-            name="phone"
-            value={quantity}
-            required
-            onChange={(e) => setQ(e.target.value)}
-          />
-          <label for="phone">Price</label>
-          <input
-            type="text"
-            id="phone"
-            name="phone"
-            value={price}
-            required
-            onChange={(e) => setPrice(e.target.value)}
-          />
-          <input type="submit" value="Submit" />
-        </form>
-      </Modal.Body>
-      <Modal.Footer>
-        <Button onClick={props.onHide}>Close</Button>
-      </Modal.Footer>
-    </Modal>
-  );
-}
-
-  const handleEdit=(p_id)=>{
-    setP_id(p_id);
-    setModalShowEditProduct(true)
+            <label>Quantity</label>
+            <input
+              type="text"
+              id="phone"
+              name="phone"
+              value={quantity}
+              required
+              onChange={(e) => setQ(e.target.value)}
+            />
+            <label for="phone">Price</label>
+            <input
+              type="text"
+              id="phone"
+              name="phone"
+              value={price}
+              required
+              onChange={(e) => setPrice(e.target.value)}
+            />
+            <input type="submit" value="Submit" />
+          </form>
+        </Modal.Body>
+        <Modal.Footer>
+          <Button onClick={props.onHide}>Close</Button>
+        </Modal.Footer>
+      </Modal>
+    );
   }
+
+  const handleEdit = (p_id) => {
+    setP_id(p_id);
+    setModalShowEditProduct(true);
+  };
 
   const [query, setQuery] = useState("");
 
@@ -467,7 +466,7 @@ function MyVerticallyCenteredModalForEditOrder(props) {
         onHide={() => setModalShow(false)}
       />
 
-<MyVerticallyCenteredModalForEditOrder
+      <MyVerticallyCenteredModalForEditOrder
         show={modalShowEditProduct}
         onHide={() => setModalShowEditProduct(false)}
       />
