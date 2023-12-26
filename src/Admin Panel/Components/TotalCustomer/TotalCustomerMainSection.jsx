@@ -63,7 +63,30 @@ export const TotalCustomerMainSection = () => {
             ?.toString()
             ?.toLowerCase()
             ?.includes(query.toLowerCase()) ||
-          item?.phone?.toString()?.toLowerCase()?.includes(query.toLowerCase())
+          item?.phone
+            ?.toString()
+            ?.toLowerCase()
+            ?.includes(query.toLowerCase()) ||
+          item?.state
+            ?.toString()
+            ?.toLowerCase()
+            ?.includes(query?.toLowerCase()) ||
+          item?.pincode
+            ?.toString()
+            ?.toLowerCase()
+            ?.includes(query?.toLowerCase()) ||
+          item?.firstName
+            ?.toString()
+            ?.toLowerCase()
+            ?.includes(query?.toLowerCase()) ||
+          item?.middleName
+            ?.toString()
+            ?.toLowerCase()
+            ?.includes(query?.toLowerCase()) ||
+          item?.lastName
+            ?.toString()
+            ?.toLowerCase()
+            ?.includes(query?.toLowerCase())
         );
       });
 
@@ -79,7 +102,30 @@ export const TotalCustomerMainSection = () => {
             ?.toString()
             ?.toLowerCase()
             ?.includes(query?.toLowerCase()) ||
-          item?.phone?.toString()?.toLowerCase()?.includes(query?.toLowerCase())
+          item?.phone
+            ?.toString()
+            ?.toLowerCase()
+            ?.includes(query?.toLowerCase()) ||
+          item?.state
+            ?.toString()
+            ?.toLowerCase()
+            ?.includes(query?.toLowerCase()) ||
+          item?.pincode
+            ?.toString()
+            ?.toLowerCase()
+            ?.includes(query?.toLowerCase()) ||
+          item?.firstName
+            ?.toString()
+            ?.toLowerCase()
+            ?.includes(query?.toLowerCase()) ||
+          item?.middleName
+            ?.toString()
+            ?.toLowerCase()
+            ?.includes(query?.toLowerCase()) ||
+          item?.lastName
+            ?.toString()
+            ?.toLowerCase()
+            ?.includes(query?.toLowerCase())
         );
       });
 
@@ -346,6 +392,7 @@ export const TotalCustomerMainSection = () => {
             <thead>
               <tr>
                 <th>First Name</th>
+                <th>Middle Name</th>
                 <th>Last Name</th>
                 <th>Address</th>
                 <th>Mobile </th>
@@ -360,6 +407,7 @@ export const TotalCustomerMainSection = () => {
                 ? searchData?.map((ele) => (
                     <>
                       <tr>
+                        <td>{ele?.firstName}</td>
                         <td>{ele?.middleName}</td>
                         <td>{ele?.lastName}</td>
                         <td>{ele?.firstLineAddress + ele.secondLineAddress}</td>
