@@ -192,6 +192,24 @@ export const TotalOrderMainSection = () => {
               ))}
             </Form.Select>
 
+            {customerId && (
+              <div>
+                {customer?.slice(0, 1)?.map((i, index) => (
+                  <>
+                    <h4>Customer Detail</h4>
+                    <p> {`${i.firstName} ${i.middleName} ${i.lastName} `}</p>
+                    <p>CustomerId {i?.customerId}</p>
+                    <p>Phone {i?.phone}</p>
+                    <p>Email{i?.email}</p>
+                    <p>Gender {i?.gender}</p>
+                    <p>BloodGroup {i?.bloodGroup}</p>
+                    <p> Address {`${i.firstLineAddress} `}</p>
+                    <p>{`${i?.district} ${i?.state} ${i?.country} `}</p>
+                  </>
+                ))}
+              </div>
+            )}
+
             <label>Order Id</label>
             <input
               type="text"

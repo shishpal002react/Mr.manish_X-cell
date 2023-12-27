@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import { Route, Routes } from "react-router-dom";
 import { Branch } from "../Admin Panel/Pages/Branch";
 import { DashBoard } from "../Admin Panel/Pages/DashBoard";
@@ -16,11 +16,10 @@ import { TotalCustomer } from "../Admin Panel/Pages/TotalCustomer";
 import { TotalOrder } from "../Admin Panel/Pages/TotalOrder";
 import { TotalProducts } from "../Admin Panel/Pages/TotalProducts";
 import { OrderTrack } from "../Admin Panel/Pages/order-track";
-import  OrderTrack2  from "../Admin Panel/Pages/orderTrack";
+import OrderTrack2 from "../Admin Panel/Pages/orderTrack";
 import { TotalUser } from "../Admin Panel/Pages/users";
 
 export const AllRoutes = () => {
-
   return (
     <div>
       <Routes>
