@@ -17,6 +17,7 @@ import { toast } from "react-toastify";
 
 export const TotalOrderMainSection = () => {
   const [tab, setTab] = useState("all");
+
   const orders = useSelector((state) => state.AuthReducer.orders);
   const navigate = useNavigate();
   //console.log(orders);
@@ -89,6 +90,7 @@ export const TotalOrderMainSection = () => {
     const [state, setState] = useState("");
     const [totalAmount, setTamt] = useState("");
     const [totalPackages, setTpack] = useState("");
+    const [userId, setUserId] = useState("");
 
     //const dispatch = useDispatch();
     const urla = "https://mr-manish-xcell-backend.vercel.app/api/v1/order-add";
@@ -149,7 +151,8 @@ export const TotalOrderMainSection = () => {
       }
     }, [props]);
 
-    //console.log(branch);
+    console.log(customerId, "customer id data");
+    console.log(userId, "user id");
     return (
       <Modal
         {...props}
@@ -181,12 +184,15 @@ export const TotalOrderMainSection = () => {
             <Form.Select
               className="mb-3"
               onChange={(e) => {
-                setCid(e.target.value);
+                const selectedValue = e.target.value;
+                const [customerId, userId] = selectedValue.split(" ");
+                setCid(customerId);
+                setUserId(userId);
               }}
             >
               <option>Select Patient</option>
               {customer?.map((i, index) => (
-                <option value={i.customerId} key={index}>
+                <option value={`${i.customerId} ${i._id}`} key={index}>
                   {`${i.firstName} ${i.middleName} ${i.lastName} Patient Id :${i.customerId}`}
                 </option>
               ))}
@@ -194,19 +200,27 @@ export const TotalOrderMainSection = () => {
 
             {customerId && (
               <div>
-                {customer?.slice(0, 1)?.map((i, index) => (
-                  <>
-                    <h4>Customer Detail</h4>
-                    <p> {`${i.firstName} ${i.middleName} ${i.lastName} `}</p>
-                    <p>CustomerId {i?.customerId}</p>
-                    <p>Phone {i?.phone}</p>
-                    <p>Email{i?.email}</p>
-                    <p>Gender {i?.gender}</p>
-                    <p>BloodGroup {i?.bloodGroup}</p>
-                    <p> Address {`${i.firstLineAddress} `}</p>
-                    <p>{`${i?.district} ${i?.state} ${i?.country} `}</p>
-                  </>
-                ))}
+                {customer?.map((i) => {
+                  if (i._id === userId) {
+                    return (
+                      <div key={i.customerId}>
+                        <h4>Customer Detail</h4>
+                        <p>{`${i.firstName} ${i.middleName} ${i.lastName}`}</p>
+                        <p>CustomerId: {i.customerId}</p>
+                        <p>Phone: {i.phone}</p>
+                        <p>Email: {i.email}</p>
+                        <p>Gender: {i.gender}</p>
+                        <p>BloodGroup: {i.bloodGroup}</p>
+                        <p>Address: {`${i.firstLineAddress} `}</p>
+                        <p>
+                          District State Country
+                          {`${i.district} ${i.state} ${i.country}`}
+                        </p>
+                      </div>
+                    );
+                  }
+                  return null;
+                })}
               </div>
             )}
 
