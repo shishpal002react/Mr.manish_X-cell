@@ -194,7 +194,11 @@ export const TotalCustomerMainSection = () => {
         });
         setModalShow(false);
         getAllUsers();
-      } catch {}
+      } catch(error) {
+        toast.error(error?.response?.data?.message, {
+          position: "top-center",
+        });
+      }
     };
     return (
       <Modal

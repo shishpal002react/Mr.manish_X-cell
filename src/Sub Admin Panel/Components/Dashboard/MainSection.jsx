@@ -91,7 +91,7 @@ export const MainSection = () => {
        const blob = await res.blob();
        FileSaver.saveAs(blob, "orders.xlsx");
      } catch (err) {
-       console.log(err.message);
+       console.log(err?.message);
      }
    };
    const handleDownload = () => {
@@ -243,12 +243,12 @@ export const MainSection = () => {
               ? searchData?.map((ele) => (
                   <>
                     <tr>
-                      <td>{ele?.catalogueId?.orderId}</td>
-                      <td>{ele.userId}</td>
-                      <td>{ele.totalPackages}</td>
-                      <td>{ele.createdAt}</td>
+                      <td>{ele?.orderId}</td>
+                      <td>{ele?.customerId}</td>
+                      <td>{ele?.totalPackages}</td>
+                      <td>{ele?.createdAt}</td>
                       <td>on-going</td>
-                      <td>{ele?.catalogueId?.totalAmount}</td>
+                      <td>{ele?.totalAmount}</td>
                       <td>
                         <button onClick={() => navigate("/invoice-details")}>
                           P.invoice
@@ -260,15 +260,17 @@ export const MainSection = () => {
               : tab === "ongoing"
               ? ongoingsearchData?.map((ele) => (
                   <>
-                    <tr>
-                      <td>{ele?.catalogueId?.orderId}</td>
-                      <td>{ele.userId}</td>
-                      <td>{ele.totalPackages}</td>
-                      <td>{ele.createdAt}</td>
+                      <tr>
+                      <td>{ele?.orderId}</td>
+                      <td>{ele?.customerId}</td>
+                      <td>{ele?.totalPackages}</td>
+                      <td>{ele?.createdAt}</td>
                       <td>on-going</td>
-                      <td>{ele?.catalogueId?.totalAmount}</td>
+                      <td>{ele?.totalAmount}</td>
                       <td>
-                        <button>P.Invoice</button>
+                        <button onClick={() => navigate("/invoice-details")}>
+                          P.invoice
+                        </button>
                       </td>
                     </tr>
                   </>
@@ -276,12 +278,12 @@ export const MainSection = () => {
               : completedsearchData?.map((ele) => (
                   <>
                     <tr>
-                      <td>{ele?.catalogueId?.orderId}</td>
-                      <td>{ele.userId}</td>
-                      <td>{ele.totalPackages}</td>
-                      <td>{ele.createdAt}</td>
+                      <td>{ele?.orderId}</td>
+                      <td>{ele?.customerId}</td>
+                      <td>{ele?.totalPackages}</td>
+                      <td>{ele?.createdAt}</td>
                       <td>completed</td>
-                      <td>{ele?.catalogueId?.totalAmount}</td>
+                      <td>{ele?.totalAmount}</td>
                       <td>Paid</td>
                     </tr>
                   </>
