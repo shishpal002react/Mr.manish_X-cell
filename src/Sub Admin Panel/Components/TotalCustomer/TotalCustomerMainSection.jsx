@@ -10,6 +10,7 @@ import axios from "axios";
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { toast } from "react-toastify";
 
 export const TotalCustomerMainSection = () => {
   const [tab, setTab] = useState("all");
@@ -29,8 +30,7 @@ export const TotalCustomerMainSection = () => {
       const res = await axios.get(url, {
         headers: { Authorization: `Bearer ${token}` },
       });
-      console.log(res?.data?.data?.data);
-      setCustomer(res?.data?.data?.data);
+      setCustomer(res?.data?.data?.reverse());
     } catch (err) {
       console.log(err.message);
     }
@@ -106,12 +106,15 @@ export const TotalCustomerMainSection = () => {
                    }
                   } 
                 )
-                console.log(res?.data);
                 getAllCustomers();
-               // getAllUsers();
-              //  dispatch(GetBranches());
-              }catch(err){
-                console.log(err.message);
+                setModalShow(false);
+                toast.success("Customer create successfull", {
+                  position: "top-center",
+                });
+              }catch(error) {
+                toast.error(error?.response?.data?.message, {
+                  position: "top-center",
+                });
               }
             }
             //console.log(branch);
@@ -243,13 +246,13 @@ export const TotalCustomerMainSection = () => {
                   searchData?.map((ele)=>(
                     <>
                     <tr>
-                      <td>{ele.middleName}</td>
+                      <td>{ele?.firstName}</td>
                       <td>{ele.lastName}</td>
 
-                      <td>{ele.firstLineAddress + ele.secondLineAddress}</td>
-                      <td>{ele.state}</td>
-                      <td>{ele.district}</td>
-                      <td>{ele.pincode}</td>
+                      <td>{ele?.firstLineAddress + ele.secondLineAddress}</td>
+                      <td>{ele?.state}</td>
+                      <td>{ele?.district}</td>
+                      <td>{ele?.pincode}</td>
                       {/*<td>
                         {" "}
                         <BsEyeFill
@@ -289,12 +292,12 @@ export const TotalCustomerMainSection = () => {
                   <>
                   <tr>
                   <td>{ele.middleName}</td>
-                    <td>{ele.lastName}</td>
+                    <td>{ele?.lastName}</td>
 
-                    <td>{ele.firstLineAddress + ele.secondLineAddress}</td>
-                    <td>{ele.state}</td>
+                    <td>{ele?.firstLineAddress + ele.secondLineAddress}</td>
+                    <td>{ele?.state}</td>
                     <td>{ele.district}</td>
-                    <td>{ele.pincode}</td>
+                    <td>{ele?.pincode}</td>
                     <td>
                       {" "}
                       {/*<BsEyeFill

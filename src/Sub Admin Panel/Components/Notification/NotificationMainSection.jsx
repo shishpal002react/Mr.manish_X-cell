@@ -8,6 +8,7 @@ import { AiFillDelete, AiFillEdit } from "react-icons/ai";
 import { AddNotificationModal } from "./AddNotificationModal";
 import axios from "axios";
 import { Modal, Button, Form, Table } from "react-bootstrap";
+import { toast } from "react-toastify";
 
 export const NotificationMainSection = () => {
   const [OpenModal, setOpenModal] = useState(false);
@@ -41,19 +42,21 @@ export const NotificationMainSection = () => {
   function MyVerticallyCenteredModal(props) {
     const ud = localStorage.getItem("token");
     const [title, setTitle] = useState("");
+    const [link, setLink] = useState("");
     const [message, setMessage] = useState("");
     const [users, setUsers] = useState([]);
     const [userId, setUserId] = useState("");
+    const [sendType, setSendType] = useState("");
 
     const urla =
-      "https://mr-manish-xcell-backend.vercel.app/api/v1/admin/notifications/";
+      "https://mr-manish-xcell-backend.vercel.app/api/v1/admin/notifications";
 
     const fetchHandler = async () => {
       try {
         const res = await axios.get(
           `https://mr-manish-xcell-backend.vercel.app/api/v1/users`
         );
-        setUsers(res.data.data.data);
+        setUsers(res?.data?.data);
       } catch {}
     };
 
@@ -66,11 +69,13 @@ export const NotificationMainSection = () => {
     const payload = {
       title,
       message,
+      link,
       recipients: [
         {
           userId,
         },
       ],
+      sendType,
     };
 
     const handleClick = async (e) => {
@@ -82,6 +87,9 @@ export const NotificationMainSection = () => {
           },
         });
         getNotifications();
+        toast.success("Notification is create successfully", {
+          position: "top-center",
+        });
         props.onHide();
       } catch (err) {
         console.log(err.message);
@@ -101,6 +109,7 @@ export const NotificationMainSection = () => {
           }
         );
         getNotifications();
+        toast.success("Notification is update successfully");
         props.onHide();
       } catch (err) {
         console.log(err.message);
@@ -124,15 +133,20 @@ export const NotificationMainSection = () => {
               <Form.Label>Title</Form.Label>
               <Form.Control
                 type="text"
-                required
                 onChange={(e) => setTitle(e.target.value)}
+              />
+            </Form.Group>
+            <Form.Group className="mb-3">
+              <Form.Label>Link</Form.Label>
+              <Form.Control
+                type="text"
+                onChange={(e) => setLink(e.target.value)}
               />
             </Form.Group>
             <Form.Group className="mb-3">
               <Form.Label>Message</Form.Label>
               <Form.Control
                 type="text"
-                required
                 onChange={(e) => setMessage(e.target.value)}
               />
             </Form.Group>
@@ -148,6 +162,16 @@ export const NotificationMainSection = () => {
                 </option>
               ))}
             </Form.Select>
+            <Form.Group className="mb-3">
+              <Form.Label>Send Type</Form.Label>
+              <Form.Select onChange={(e) => setSendType(e.target.value)}>
+                <option>Open this type menu</option>
+                <option value="sms">SMS</option>
+                <option value="push">PUSH</option>
+                <option value="Both">BOTH</option>
+              </Form.Select>
+            </Form.Group>
+
             <Button type="submit" variant="success">
               Submit
             </Button>
