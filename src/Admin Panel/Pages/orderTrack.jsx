@@ -79,7 +79,7 @@ const OrderTrack2 = () => {
       const [state, setState] = useState("");
       const [orderId2, setOrderId] = useState();
       const [orderId3, setOrderId3] = useState();
-      const message = "order dispatched";
+      // const message = "order dispatched";
 
       const urld =
         "https://mr-manish-xcell-backend.vercel.app/api/v1/admin/orderTrackings";
@@ -89,6 +89,13 @@ const OrderTrack2 = () => {
         const token = localStorage.getItem("token");
         const orderId4 = orderId2 === undefined ? orderId3 : orderId2;
 
+
+    //     "date": "march 15 2023",
+    //     "time": "01:08 pm",
+    //     "message": "Order dispatched ",
+    //     "expectedDelivered": ""
+    // }
+        
         try {
           const res = await axios.post(
             urld,
@@ -96,17 +103,16 @@ const OrderTrack2 = () => {
               orderId: orderId4,
               date,
               time,
-              city,
+              // city,
               expectedDate,
-              state,
-              message,
+              message:state,
             },
             {
               headers: { Authorization: `Bearer ${token}` },
             }
           );
-
           getOrderTrackById();
+          setMdShow(false);
         } catch (err) {
           console.log(err.message);
         }
@@ -137,8 +143,8 @@ const OrderTrack2 = () => {
 
                 <label for="name">Time</label>
                 <input type="time" onChange={(e) => setTime(e.target.value)} />
-                <label for="name">City</label>
-                <input type="text" onChange={(e) => setCity(e.target.value)} />
+                {/* <label for="name">City</label>
+                <input type="text" onChange={(e) => setCity(e.target.value)} /> */}
 
                 <label for="name">Expected Date</label>
                 <input
@@ -146,7 +152,7 @@ const OrderTrack2 = () => {
                   onChange={(e) => setExpectedDate(e.target.value)}
                 />
 
-                <label>State</label>
+                <label>Message</label>
                 <input type="text" onChange={(e) => setState(e.target.value)} />
                 <button type="submit"> Submit </button>
               </form>
